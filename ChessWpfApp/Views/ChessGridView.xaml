@@ -1,0 +1,46 @@
+﻿<Page x:Class="ChessWpfApp.Views.ChessGridView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ChessWpfApp.Views"
+      xmlns:controls="clr-namespace:ChessWpfApp.Controls"
+
+       xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="700"
+      Title="ChessGrid">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding InitGrid}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <ItemsControl Margin="10" Name="SquaresContainer"
+              ItemsSource="{Binding Squares}">
+
+            <ItemsControl.Template>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </ItemsControl.Template>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Width="600" Height="600" Rows="8" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Rectangle Fill="{Binding Color}"/>
+                        <controls:FigureControl
+                            ClickCommand="{Binding DataContext.ClickFigure, ElementName=SquaresContainer}"
+                            MouseUpCommand="{Binding DataContext.MouseUpFigure, ElementName=SquaresContainer}"
+                            Figure="{Binding Figure}"></controls:FigureControl>
+                    </Grid>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Page>

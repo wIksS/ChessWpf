@@ -1,0 +1,6 @@
+C:\Users\Sadmin\source\repos\ChessWpfApp\ChessWpfApp.Models\bin\Debug\ChessWpfApp.Models.dll
+C:\Users\Sadmin\source\repos\ChessWpfApp\ChessWpfApp.Models\bin\Debug\ChessWpfApp.Models.pdb
+C:\Users\Sadmin\source\repos\ChessWpfApp\ChessWpfApp.Models\obj\Debug\ChessWpfApp.Models.csprojAssemblyReference.cache
+C:\Users\Sadmin\source\repos\ChessWpfApp\ChessWpfApp.Models\obj\Debug\ChessWpfApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Sadmin\source\repos\ChessWpfApp\ChessWpfApp.Models\obj\Debug\ChessWpfApp.Models.dll
+C:\Users\Sadmin\source\repos\ChessWpfApp\ChessWpfApp.Models\obj\Debug\ChessWpfApp.Models.pdb
